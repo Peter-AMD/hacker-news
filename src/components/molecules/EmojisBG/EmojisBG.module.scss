@@ -1,0 +1,18 @@
+// .container {
+//   perspective: 800px;
+//   width: 100vw;
+//   height: 100vh;
+// }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}

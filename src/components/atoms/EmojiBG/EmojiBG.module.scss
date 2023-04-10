@@ -1,0 +1,13 @@
+// .container {
+//   perspective: 800px;
+//   width: 100vw;
+//   height: 100vh;
+// }
+
+.emoji {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}

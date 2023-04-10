@@ -1,0 +1,210 @@
+// news item css
+
+.main {
+  position: relative;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  width: 420px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.textsSummary {
+  position: relative;
+  z-index: 3;
+  padding: 12px;
+  height: 180px;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #99e6ff;
+  background-image:
+    radial-gradient(at 32% 4%, hsla(4, 8%, 23%, 1) 0px, transparent 50%),
+    radial-gradient(at 84% 22%, hsla(221, 10%, 35%, 1) 0px, transparent 50%),
+    radial-gradient(at 93% 41%, hsla(167, 22%, 16%, 1) 0px, transparent 50%),
+    radial-gradient(at 85% 31%, hsla(347, 8%, 11%, 1) 0px, transparent 50%),
+    radial-gradient(at 22% 58%, hsla(72, 11%, 14%, 1) 0px, transparent 50%),
+    radial-gradient(at 60% 21%, hsla(73, 14%, 13%, 1) 0px, transparent 50%),
+    radial-gradient(at 92% 45%, hsla(103, 12%, 48%, 1) 0px, transparent 50%);
+  filter: opacity(0.5);
+  box-shadow: -7px 11px 84px 18px rgba(199, 5, 5, 0.16);
+  z-index: 3;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 6;
+  height: 100%;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 15px;
+  color: ghostwhite;
+  transition: text-shadow .3s ease-in-out;
+
+  &:hover {
+    text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.19);
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(227, 246, 116);
+
+}
+
+.linksActions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex: 1;
+
+  >.summaryButton {
+    color: ghostwhite;
+    font-family: inherit;
+    font-size: 12px;
+    border: 1px solid rgb(227, 246, 116);
+    background: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform-origin: center;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: rgb(168, 189, 111);
+    }
+  }
+}
+
+.preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 21;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, .6);
+
+  .main {
+    height: calc(100vh - 60px);
+    max-width: 630px;
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .textsSummary {
+    height: 100%;
+
+    .by {
+      text-transform: lowercase;
+      font-weight: 300;
+    }
+
+    .authorName {
+      font-weight: 300;
+    }
+
+    .linksActions {
+      >.closeButton {
+        color: ghostwhite;
+        font-family: inherit;
+        font-size: 12px;
+        border: 1px solid rgb(177, 194, 135);
+        background: none;
+        padding: 12px;
+        border-radius: 6px;
+        cursor: pointer;
+
+      }
+    }
+
+    .summary {
+      color: ghostwhite;
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 6px;
+      background-color: rgba(0, 0, 0, .6);
+      max-height: 60vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-indent: 15px;
+    }
+
+    .karmaStoryScore {
+      margin-top: 6px;
+      display: flex;
+      gap: 9px;
+
+      .karma {
+        display: flex;
+        gap: 3px;
+
+        >.karmaK {
+          width: 21px;
+          height: 21px;
+          background-color: #181A1B;
+          border-radius: 50%;
+          color: ghostwhite;
+          text-align: center;
+        }
+
+        >.karmaScore {
+          color: ghostwhite;
+        }
+      }
+
+
+      .story {
+        display: flex;
+        gap: 3px;
+
+        >.storyScoreS {
+          width: 21px;
+          height: 21px;
+          background-color: #181A1B;
+          border-radius: 50%;
+          color: ghostwhite;
+          text-align: center;
+        }
+
+        >.storyScore {
+          color: ghostwhite;
+        }
+
+      }
+    }
+  }
+
+
+}
